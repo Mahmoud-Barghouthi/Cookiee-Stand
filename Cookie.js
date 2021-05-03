@@ -80,9 +80,9 @@ seattle.renderFunction();
 
 let tokyo = {
     name: 'Tokyo',
-    minOfCust: 23,
-    maxOfCust: 65,
-    cookies: 6.3,
+    minOfCust: 3,
+    maxOfCust: 24,
+    cookies: 1.2,
     cusPerHour: [],
     coPerHour: [],
     total:0,
@@ -144,9 +144,9 @@ tokyo.renderFunction();
 
 let dubai = {
     name: 'Dubai',
-    minOfCust: 23,
-    maxOfCust: 65,
-    cookies: 6.3,
+    minOfCust: 11,
+    maxOfCust: 38,
+    cookies: 3.7,
     cusPerHour: [],
     coPerHour: [],
     total:0,
@@ -209,9 +209,9 @@ dubai.renderFunction();
 
 let paris = {
     name: 'Paris',
-    minOfCust: 23,
-    maxOfCust: 65,
-    cookies: 6.3,
+    minOfCust: 20,
+    maxOfCust: 38,
+    cookies: 2.3,
     cusPerHour: [],
     coPerHour: [],
     total:0,
@@ -273,9 +273,9 @@ paris.renderFunction();
 
 let lima = {
     name: 'Lima',
-    minOfCust: 23,
-    maxOfCust: 65,
-    cookies: 6.3,
+    minOfCust: 2,
+    maxOfCust: 16,
+    cookies: 4.6,
     cusPerHour: [],
     coPerHour: [],
     total:0,

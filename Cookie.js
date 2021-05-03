@@ -20,7 +20,8 @@ let seattle = {
     cookies: 6.3,
     cusPerHour: [],
     coPerHour: [],
-    total:0,
+    total: 0,
+
     customerPerHour: function () {
         for (let i = 0; i < workHour.length; i++) {
             //   this.cusPerHour[i] = random (this.minOfCust, this.maxOfCust);
@@ -35,10 +36,16 @@ let seattle = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-     //read the readme.md files please 
+    //read the readme.md files please 
     renderFunction: function () {
         let div = document.getElementById('cookies');
+        // let bHeader = document.createElement('h1');
+        // div.appendChild(bHeader);
+        // bHeader.textContent = this.welcome;   Ask one of the TA or Ms. Baraah about that 
+
+
         //header means the location
+
         let header = document.createElement('h2');
         div.appendChild(header);
         header.textContent = this.name;
@@ -53,8 +60,8 @@ let seattle = {
         }
 
         let li1 = document.createElement('li');
-            ul.appendChild(li1);
-            li1.textContent= `Total : ${this.total} cookies`;
+        ul.appendChild(li1);
+        li1.textContent = `Total : ${this.total} cookies`;
 
 
 
@@ -85,7 +92,7 @@ let tokyo = {
     cookies: 1.2,
     cusPerHour: [],
     coPerHour: [],
-    total:0,
+    total: 0,
     customerPerHour: function () {
         for (let i = 0; i < workHour.length; i++) {
             //   this.cusPerHour[i] = random (this.minOfCust, this.maxOfCust);
@@ -100,7 +107,7 @@ let tokyo = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-     //read the readme.md files please 
+    //read the readme.md files please 
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -118,8 +125,8 @@ let tokyo = {
         }
 
         let li1 = document.createElement('li');
-            ul.appendChild(li1);
-            li1.textContent= `Total : ${this.total} cookies`;
+        ul.appendChild(li1);
+        li1.textContent = `Total : ${this.total} cookies`;
 
 
 
@@ -149,7 +156,7 @@ let dubai = {
     cookies: 3.7,
     cusPerHour: [],
     coPerHour: [],
-    total:0,
+    total: 0,
     customerPerHour: function () {
         for (let i = 0; i < workHour.length; i++) {
             //   this.cusPerHour[i] = random (this.minOfCust, this.maxOfCust);
@@ -164,7 +171,7 @@ let dubai = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-     //read the readme.md files please 
+    //read the readme.md files please 
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -182,8 +189,8 @@ let dubai = {
         }
 
         let li1 = document.createElement('li');
-            ul.appendChild(li1);
-            li1.textContent= `Total : ${this.total} cookies`;
+        ul.appendChild(li1);
+        li1.textContent = `Total : ${this.total} cookies`;
 
 
 
@@ -214,7 +221,7 @@ let paris = {
     cookies: 2.3,
     cusPerHour: [],
     coPerHour: [],
-    total:0,
+    total: 0,
     customerPerHour: function () {
         for (let i = 0; i < workHour.length; i++) {
             //   this.cusPerHour[i] = random (this.minOfCust, this.maxOfCust);
@@ -229,7 +236,7 @@ let paris = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-     //read the readme.md files please 
+    //read the readme.md files please 
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -247,8 +254,8 @@ let paris = {
         }
 
         let li1 = document.createElement('li');
-            ul.appendChild(li1);
-            li1.textContent= `Total : ${this.total} cookies`;
+        ul.appendChild(li1);
+        li1.textContent = `Total : ${this.total} cookies`;
 
 
 
@@ -278,7 +285,7 @@ let lima = {
     cookies: 4.6,
     cusPerHour: [],
     coPerHour: [],
-    total:0,
+    total: 0,
     customerPerHour: function () {
         for (let i = 0; i < workHour.length; i++) {
             //   this.cusPerHour[i] = random (this.minOfCust, this.maxOfCust);
@@ -293,7 +300,7 @@ let lima = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-     //read the readme.md files please 
+    //read the readme.md files please 
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -311,8 +318,8 @@ let lima = {
         }
 
         let li1 = document.createElement('li');
-            ul.appendChild(li1);
-            li1.textContent= `Total : ${this.total} cookies`;
+        ul.appendChild(li1);
+        li1.textContent = `Total : ${this.total} cookies`;
 
 
 

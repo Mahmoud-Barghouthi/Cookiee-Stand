@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 /* eslint-disable no-empty */
 /* eslint-disable indent */
 'use strict';
@@ -36,12 +37,12 @@ let seattle = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-    //read the readme.md files please 
+    //read the readme.md files please
     renderFunction: function () {
         let div = document.getElementById('cookies');
         // let bHeader = document.createElement('h1');
         // div.appendChild(bHeader);
-        // bHeader.textContent = this.welcome;   Ask one of the TA or Ms. Baraah about that 
+        // bHeader.textContent = this.welcome;   Ask one of the TA or Ms. Baraah about that
 
 
         //header means the location
@@ -83,7 +84,7 @@ seattle.cookiesPerHour();
 seattle.renderFunction();
 
 
-//Tokyo 
+//Tokyo
 
 let tokyo = {
     name: 'Tokyo',
@@ -107,7 +108,7 @@ let tokyo = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-    //read the readme.md files please 
+    //read the readme.md files please
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -171,7 +172,7 @@ let dubai = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-    //read the readme.md files please 
+    //read the readme.md files please
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -236,7 +237,7 @@ let paris = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-    //read the readme.md files please 
+    //read the readme.md files please
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location
@@ -300,7 +301,7 @@ let lima = {
             this.total = this.total + this.coPerHour[i];
         }
     },
-    //read the readme.md files please 
+    //read the readme.md files please
     renderFunction: function () {
         let div = document.getElementById('cookies');
         //header means the location

@@ -1,15 +1,158 @@
-/* eslint-disable no-redeclare */
-/* eslint-disable no-empty */
-/* eslint-disable indent */
+
+/* eslint-disable eqeqeq */
 'use strict';
 
+//Constructor
+
+let workHours = ['6:00  AM ', '7:00  AM', '8:00  AM', '9:00  AM', '10:00  AM', '11:00 AM', '12 PM', '13:00 PM', '14:00 PM', '15:00 PM', '16:00 PM', '17:00 PM', '18:00 PM'];
+let hourStore=[];
+let allSum=[];
+
+function CookiesStore(name, min, max, avg) {
+  let sale=[] , sum=0;
+  this.name = name;
+  this.min = min;
+  this.max = max;
+  this.avg = avg;
+  this.sale=sale;
+  this.sum=sum;
+}
+
+//--------------------------------------------------
+CookiesStore.prototype.cusPerHour = function () {
+  return Math.floor((Math.random() * ((this.max) - (this.min)) + this.min));
+};
+
+
+CookiesStore.prototype.process = function () {
+  let NumOfCookies;
+  for (let i = 0; i < workHours.length; i++) {
+    NumOfCookies=Math.floor((Math.random() * ((this.max) - (this.min)) + this.min));
+    this.sum+=NumOfCookies;
+    this.sale.push(NumOfCookies);
+    hourStore[i]=this.sale[i];
+
+  }
+
+  this.sale.push(this.sum);
+  //--------------------------------------------------
+
+  if(allSum.length==0)
+  {
+    allSum=this.sale;
+    console.log(allSum);
+  }
+  else
+  {
+    for (let i = 0; i < this.sale.length; i++) {
+
+      allSum[i]=allSum[i]+this.sale[i];
+
+    }
+  }
+
+};
+//--------------------------------------------------
+
+
+function render ()
+{
+  let th=[];
+  let theParent=document.getElementById('cookies');
+  let table=document.createElement('table');
+  theParent.appendChild(table);
+  table.setAttribute('id','salesTable');
+  //-------------------------------------------------------
+  let tr1=document.createElement('tr');
+  table.appendChild(tr1);
+  //--------------------------------------------------
+  let row1=document.createElement('th');
+  tr1.appendChild(row1);
+  //--------------------------------------------------
+  row1.textContent='City Name';
+  for(let i=0;i<workHours.length;i++)
+  {
+    th[i]=document.createElement('th');
+    tr1.appendChild(th[i]);
+    th[i].textContent=workHours[i];
+
+  }
+  let th2=document.createElement('th');
+  tr1.appendChild(th2);
+  th2.textContent='Daily Location Total';
+}
+
+render();
+//--------------------------------------------------
+
+CookiesStore.prototype.render = function () {
+  let td=[];
+
+  let parent=document.getElementById('salesTable');
+  let tr=document.createElement('tr');
+
+  let tdFirst=document.createElement('td');
+  tr.appendChild(tdFirst);
+  tdFirst.textContent=this.name;
+
+  parent.appendChild(tr);
+  for(let i=0; i<this.sale.length;i++)
+  {
+    td[i]=document.createElement('td');
+    tr.appendChild(td[i]);
+    td[i].textContent=this.sale[i];
+  }
+};
+
+//--------------------------------------------------
+
+function total()
+{
+  let td = [];
+  let parent=document.getElementById('salesTable');
+  let tr=document.createElement('tr');
+  parent.appendChild(tr);
+  let tdFirst=document.createElement('td');
+  tr.appendChild(tdFirst);
+  tdFirst.textContent='Total';
+  for (let i = 0; i < allSum.length+1; i++) {
+    td[i]=document.createElement('td');
+    tr.appendChild(td[i]);
+    td[i].textContent=allSum[i];
+
+  }
+}
+
+let Seattle = new CookiesStore('Seattle', 23, 65, 6.3);
+Seattle.process();
+Seattle.render();
+
+let Tokyo = new CookiesStore('Tokyo', 3, 24, 1.2);
+Tokyo.process();
+Tokyo.render();
+
+let Dubai = new CookiesStore('Dubai', 11, 38, 3.7);
+Dubai.process();
+Dubai.render();
+
+let Paris = new CookiesStore('Paris', 20, 38, 2.3);
+Paris.process();
+Paris.render();
+
+let Lima = new CookiesStore('Lima', 2, 16, 4.6);
+Lima.process();
+Lima.render();
+
+total();
+
+// Literal
 /* we need to calculate the following
 1. making random function that would give us two values
 2. we need to store the random values in an array by creating a customer in the obj
 3. cookies per hour and its average
 4. create unorderlist with the total
 */
-
+/*
 let workHour = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12am:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 
 //Location Seattle
@@ -341,4 +484,4 @@ lima.customerPerHour();
 lima.cookiesPerHour();
 lima.renderFunction();
 
-
+*/

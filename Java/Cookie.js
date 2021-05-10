@@ -20,14 +20,14 @@ function CookiesStore(name, min, max, avg) {
 
 //--------------------------------------------------
 CookiesStore.prototype.cusPerHour = function () {
-  return Math.floor((Math.random() * ((this.max) - (this.min)) + this.min));
+  return Math.floor((Math.random() * ((this.max) - (this.min)) + this.min)*this.avg);
 };
 
 
 CookiesStore.prototype.process = function () {
   let NumOfCookies;
   for (let i = 0; i < workHours.length; i++) {
-    NumOfCookies=Math.floor((Math.random() * ((this.max) - (this.min)) + this.min));
+    NumOfCookies=Math.floor((Math.random() * ((this.max) - (this.min)) + this.min)*this.avg);
     this.sum+=NumOfCookies;
     this.sale.push(NumOfCookies);
     hourStore[i]=this.sale[i];

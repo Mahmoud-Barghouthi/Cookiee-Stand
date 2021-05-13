@@ -115,7 +115,7 @@ function total()
   let tdFirst=document.createElement('td');
   tr.appendChild(tdFirst);
   tdFirst.textContent='Total';
-  for (let i = 0; i < allSum.length+1; i++) {
+  for (let i = 0; i < allSum.length; i++) {
     td[i]=document.createElement('td');
     tr.appendChild(td[i]);
     td[i].textContent=allSum[i];

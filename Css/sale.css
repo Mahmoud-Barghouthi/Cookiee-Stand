@@ -51,4 +51,86 @@ main nav ul li a:hover
     color: #A65A2E;    
 }
 
-main p
+/*form*/
+
+
+
+  table {
+    border-collapse:collapse;
+    width: 100%;
+    border-radius: 200px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  
+
+  tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+  }
+  tr:nth-child(even) {
+      background-color: #010326;
+      color: white;
+    }
+
+
+    tr:nth-child(odd):hover {
+        background-color: black;
+        color: orangered;
+       }
+
+    tr:nth-child(even):hover {
+        color: orangered;
+    }
+
+    tr:first-child {
+        background-color: yellow;
+      }
+
+
+
+#fieldset 
+{
+    text-align: center;
+    padding: 50px;
+
+}
+#fieldset legend
+{
+    background-color: white;
+    font-size: 30px;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bolder;
+}
+#fieldset label
+{
+    margin-left: 50px;
+    margin-right: 5px;
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    background-color: black;
+}
+
+
+
+#fieldset 
+{
+    border-radius: 10px;
+    border-style: solid 1px ;
+    border-bottom: 6px solid orangered;
+    background-color: rgba(211, 211, 211, 0.301);
+    vertical-align: middle;
+    text-align: center;
+}
+
+ button {
+     background-color: orangered;
+     height: 35px;
+     width: 158px;
+ }
+
+

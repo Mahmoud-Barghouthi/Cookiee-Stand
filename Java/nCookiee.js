@@ -118,7 +118,7 @@ SalmonCookies.prototype.bodytable = function () {
         let total1 = document.createElement('td');
         tr.appendChild(total1);
         total1.textContent = this.avgCookiesPerHour[i];
-        ///213213
+        
     }
     let total1 = document.createElement('td');
     tr.appendChild(total1);

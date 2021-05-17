@@ -13,6 +13,10 @@ h1
     text-align: center;
 }
 
+#location {
+    bottom: 20px;
+}
+
 
 main nav
 {
@@ -75,6 +79,7 @@ main div:last-child(){
     padding-right: 200px;
 
 }
+
 .about {
     background-color: #262626;
     color: white;
@@ -91,10 +96,62 @@ main div:last-child(){
     padding-right: 40px;
     border-radius: 50px;
 }
+.about img {
+    float: left;
+    padding-right: 20px;
+    width: 235px;
+}
 
 .salmon {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
+}
+
+.shirt {
+    width: 522px;
+    background-color: #262626;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Architects Daughter', cursive;
+    display: inline-block;
+    /* text-indent: 10px; */
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+}
+.shirt img {
+    float: left;
+    padding-right: 20px;
+    width: 235px;
+}
+
+.family {
+    float: right;
+    width: 522px;
+    background-color: #262626;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Architects Daughter', cursive;
+    display: inline-block;
+    /* text-indent: 10px; */
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+}
+.family img {
+    float: left;
+    padding-right: 20px;
+    width: 235px;
 }

@@ -3,8 +3,7 @@
 /* eslint-disable indent */
 'user strict';
 let hour = ['06 AM ', '07 AM ', '08 AM ', '09 AM ', '10 AM ', '11 AM ', '12 PM ', '01 PM ', '02 PM ', '03 PM ', '04 PM ', '05 PM ', '06 PM ', '07 PM '];
-
-
+let footer1 = document.createElement('tr');
 
 let shopsName = [];
 
@@ -30,10 +29,9 @@ SalmonCookies.prototype.calculateRandomCus = function () {
     // we need to create a for loop to calculate the hours with the customers
     for (let i = 0; i < hour.length; i++) {
         //to push all the random numbers to random customer array
-        this.randomCus.push(randomNumber(this.mincust, this.maxcust));
+        this.randomCus.push(Math.floor(randomNumber(this.mincust, this.maxcust) * this.avgCookies));
     }
     // console.log('the random numbers are ' + this.randomCus);
-    // this.randomCus();
 };
 
 SalmonCookies.prototype.calculateCookiesAverage = function () {
@@ -63,6 +61,7 @@ Paris.calculateCookiesAverage();
 let Lima = new SalmonCookies('Lima', 2, 16, 4.6);
 Lima.calculateRandomCus();
 Lima.calculateCookiesAverage();
+
 
 let cookies = document.getElementById('cookies');
 // console.log(cookies);
@@ -117,7 +116,7 @@ SalmonCookies.prototype.bodytable = function () {
     for (let i = 0; i < hour.length; i++) {
         let total1 = document.createElement('td');
         tr.appendChild(total1);
-        total1.textContent = this.total;
+        total1.textContent = this.randomCus[i];
     }
     let total1 = document.createElement('td');
     tr.appendChild(total1);
@@ -132,8 +131,24 @@ for (let i = 0; i < shopsName.length; i++) {
 
 }
 
+let form = document.getElementById('form1');
+form.addEventListener('submit', addstore);
+function addstore(event) {
+    event.preventDefault();
+    let location1 = event.target.Location.value;
+    let Cookies1 = event.target.Cookie.value;
+    let Minimum1 = event.target.Minimum.value;
+    let Maximum1 = event.target.Maximum.value;
+    let store1 = new SalmonCookies(location1, Minimum1, Maximum1, Cookies1);
+    store1.calculateRandomCus();
+    store1.calculateCookiesAverage();
+    footer1.remove();
+    store1.bodytable();
+    console.log(location1, Cookies1, Minimum1, Maximum1);
+    footer();
+}
+
 function footer() {
-    let footer1 = document.createElement('tr');
     table.appendChild(footer1);
 
     let footer2 = document.createElement('th');
@@ -151,3 +166,7 @@ function footer() {
     }
 }
 footer();
+
+
+
+

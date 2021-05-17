@@ -1,8 +1,6 @@
-
 body
 {
-/* background-image: url(https://thumbs.dreamstime.com/b/chocolate-chip-cookies-black-background-tasty-152024150.jpg); */
-background-image: url(https://thumbs.dreamstime.com/b/drink-milk-cookies-concept-cup-milk-fresh-homemade-cookies-yellow-background-top-view-drink-milk-cookies-134657049.jpg);
+background-image: url(https://wallpaperstock.net/funny-cookies-wallpapers_41553_1920x1080.jpg);
 }
 
 h1 
@@ -37,119 +35,15 @@ main nav a
     font-weight: bolder;
     text-decoration: none;
     font-size: 20px;
-    color:#A64F03;
+    color:black;
     font-family: cursive;    
 }
 
 main nav  a:hover
 {
     font-size: 20px;
-    color: black;    
+    color: rgb(16, 208, 233);    
 }
-
-h2{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-}
-main section img {
-    float: right;
-    width: 27%;
-    height: auto;
-    border-radius: 50%;
-    padding-right: 100px;
-}
-
-div img
-{
-    float: left;
-    width: 27%;
-    height: auto;
-    border-radius: 50%;
-    padding-left: 100px;
-
-}
-
-main div:last-child(){
-    width: 27%;
-    height: auto;
-    border-radius: 50%;
-    padding-left: 100px;
-    padding-right: 200px;
-
-}
-
-.about {
-    background-color: #262626;
-    color: white;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: 'Architects Daughter', cursive;
-    display: inline-block;
-    text-indent: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 50px;
-}
-.about img {
-    float: left;
-    padding-right: 20px;
-    width: 235px;
-}
-
-
-.shirt {
-    width: 522px;
-    background-color: #262626;
-    color: white;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: 'Architects Daughter', cursive;
-    display: inline-block;
-    /* text-indent: 10px; */
-    margin-left: 200px;
-    /* margin-right: 50px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 50px;
-}
-.shirt img {
-    float: left;
-    padding-right: 20px;
-    width: 235px;
-}
-
-.family {
-    width: 522px;
-    background-color: #262626;
-    color: white;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: 'Architects Daughter', cursive;
-    display: inline-block;
-    /* text-indent: 10px; */
-    margin-left: 200px;
-    /* margin-right: 200px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 50px;
-}
-.family img {
-    float: left;
-    padding-right: 20px;
-    width: 235px;
-}
-/* Locations */
-/*Seattle*/
 
 #S {
     float:left;
@@ -175,7 +69,7 @@ main div:last-child(){
 }
 #S a {
     text-decoration: none;
-    color: #A64F03;
+    color: white;
 }
 
 #S iframe {
@@ -207,7 +101,7 @@ main div:last-child(){
 }
 #T a {
     text-decoration: none;
-    color: #A64F03;
+    color: white;
 }
 #T iframe {
     border-radius: 50px;
@@ -243,7 +137,7 @@ main div:last-child(){
 
 #D a {
     text-decoration: none;
-    color: #A64F03;
+    color: white;
 }
 #D iframe {
     border-radius: 50px;
@@ -273,7 +167,7 @@ main div:last-child(){
 }
 #P a {
     text-decoration: none;
-    color: #A64F03;
+    color: white;
 }
 #P iframe {
     border-radius: 50px;
@@ -307,16 +201,8 @@ main div:last-child(){
 }
 #L a {
     text-decoration: none;
-    color: #A64F03;
+    color: white;
 }
 #L iframe {
     border-radius: 50px;
 }
-
-
-.salmon {
-    display: inline-block;
-    margin-left: 500px;
-    margin-right: 500px;
-    width: 50%;
-} 

@@ -167,7 +167,7 @@ function footer() {
         footerTotal.textContent = totalEachHour;
     }
 }
-// footer();
+footer();
 
 
 

@@ -127,7 +127,7 @@ main nav ul li a:hover
     text-align: center;
 }
 
- button {
+ #button {
      background-color: orangered;
      height: 35px;
      width: 158px;

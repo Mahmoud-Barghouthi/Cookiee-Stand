@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
@@ -29,12 +30,12 @@ SalmonCookies.prototype.calculateRandomCus = function () {
     // we need to create a for loop to calculate the hours with the customers
     for (let i = 0; i < hour.length; i++) {
         //to push all the random numbers to random customer array
-        this.randomCus.push(Math.floor(randomNumber(this.mincust, this.maxcust) * this.avgCookies));
+        this.randomCus.push(Math.floor(randomNumber(this.mincust, this.maxcust)));
     }
     // console.log('the random numbers are ' + this.randomCus);
 };
 
-SalmonCookies.prototype.calculateCookiesAverage = function () {
+SalmonCookies.prototype.calculateCookiesHour = function () {
     for (let i = 0; i < hour.length; i++) {
         this.avgCookiesPerHour.push(Math.floor(this.avgCookies * this.randomCus[i]));
         this.total = this.total + this.avgCookiesPerHour[i];
@@ -43,24 +44,24 @@ SalmonCookies.prototype.calculateCookiesAverage = function () {
 
 //in Order to call the function for the prototype, we need to create new names location
 let Seattle = new SalmonCookies('Seattle', 23, 65, 6.3);
-Seattle.calculateRandomCus();
-Seattle.calculateCookiesAverage();
+// Seattle.calculateRandomCus();
+// Seattle.calculateCookiesHour();
 
 let Tokyo = new SalmonCookies('Tokyo', 3, 24, 1.2);
-Tokyo.calculateRandomCus();
-Tokyo.calculateCookiesAverage();
+// Tokyo.calculateRandomCus();
+// Tokyo.calculateCookiesHour();
 
 let Dubai = new SalmonCookies('Dubai', 11, 38, 3.7);
-Dubai.calculateRandomCus();
-Dubai.calculateCookiesAverage();
+// Dubai.calculateRandomCus();
+// Dubai.calculateCookiesHour();
 
 let Paris = new SalmonCookies('Paris', 20, 38, 2.3);
-Paris.calculateRandomCus();
-Paris.calculateCookiesAverage();
+// Paris.calculateRandomCus();
+// Paris.calculateCookiesHour();
 
 let Lima = new SalmonCookies('Lima', 2, 16, 4.6);
-Lima.calculateRandomCus();
-Lima.calculateCookiesAverage();
+// Lima.calculateRandomCus();
+// Lima.calculateCookiesHour();
 
 
 let cookies = document.getElementById('cookies');
@@ -116,7 +117,8 @@ SalmonCookies.prototype.bodytable = function () {
     for (let i = 0; i < hour.length; i++) {
         let total1 = document.createElement('td');
         tr.appendChild(total1);
-        total1.textContent = this.randomCus[i];
+        total1.textContent = this.avgCookiesPerHour[i];
+        ///213213
     }
     let total1 = document.createElement('td');
     tr.appendChild(total1);
@@ -126,7 +128,7 @@ SalmonCookies.prototype.bodytable = function () {
 
 for (let i = 0; i < shopsName.length; i++) {
     shopsName[i].calculateRandomCus();
-    shopsName[i].calculateCookiesAverage();
+    shopsName[i].calculateCookiesHour();
     shopsName[i].bodytable();
 
 }
@@ -141,7 +143,7 @@ function addstore(event) {
     let Maximum1 = event.target.Maximum.value;
     let store1 = new SalmonCookies(location1, Minimum1, Maximum1, Cookies1);
     store1.calculateRandomCus();
-    store1.calculateCookiesAverage();
+    store1.calculateCookiesHour();
     footer1.remove();
     store1.bodytable();
     console.log(location1, Cookies1, Minimum1, Maximum1);

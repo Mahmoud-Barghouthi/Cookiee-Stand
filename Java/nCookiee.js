@@ -2,7 +2,7 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
 'user strict';
-let hour = ['06AM: ', '07AM: ', '08AM: ', '09AM: ', '10AM: ', '11AM: ', '12PM: ', '1PM: ', '2PM: ', '3PM: ', '4PM: ', '5PM: ', '6PM: ', '7PM: '];
+let hour = ['06 AM ', '07 AM ', '08 AM ', '09 AM ', '10 AM ', '11 AM ', '12 PM ', '01 PM ', '02 PM ', '03 PM ', '04 PM ', '05 PM ', '06 PM ', '07 PM '];
 
 
 

@@ -42,7 +42,6 @@ main nav ul li a
     color: white;
     font-family: cursive;
 
-    
 }
 
 main nav ul li a:hover
@@ -119,6 +118,7 @@ main nav ul li a:hover
 
 #fieldset 
 {
+    background-image: url(https://t4.ftcdn.net/jpg/03/10/11/75/360_F_310117584_EVU1JD8sizbujGrfiKuJ8Gee2D4SR0HV.jpg);
     border-radius: 10px;
     border-style: solid 1px ;
     border-bottom: 6px solid orangered;

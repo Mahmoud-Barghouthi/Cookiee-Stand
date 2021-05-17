@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable eol-last */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
@@ -22,7 +23,7 @@ function SalmonCookies(names, mincust, maxcust, avgCookies) {
 }
 
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min) ;
 }
 
 //prototype, we use this to add a function outside the object

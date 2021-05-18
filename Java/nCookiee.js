@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable no-trailing-spaces */
@@ -69,23 +70,6 @@ let cookies = document.getElementById('cookies');
 let table = document.createElement('table');
 cookies.appendChild(table);
 
-// console.log(cookies);
-
-// let tr= document.createElement('tr');
-// table.appendChild(tr);
-// console.log(cookies);
-// let th=document.createElement('th');
-// tr.appendChild(th);
-// console.log('The header is ' + th);
-// th.textContent='';
-
-// for (let i = 0; i < hour.length; i++) {
-// let td = document.createElement('td');
-// tr.appendChild(td); 
-// console.log (td);  
-// th.textContent = hour[i];
-// }
-
 function emptyHeader() {
     let th = document.createElement('tr');
     table.appendChild(th);
@@ -118,7 +102,7 @@ SalmonCookies.prototype.bodytable = function () {
         let total1 = document.createElement('td');
         tr.appendChild(total1);
         total1.textContent = this.avgCookiesPerHour[i];
-        
+
     }
     let total1 = document.createElement('td');
     tr.appendChild(total1);
@@ -135,6 +119,7 @@ for (let i = 0; i < shopsName.length; i++) {
 
 function footer() {
     table.appendChild(footer1);
+    footer1.setAttribute('id', 'totalRow');
     let footer2 = document.createElement('th');
     footer1.appendChild(footer2);
     footer2.textContent = 'Totals';
@@ -143,6 +128,8 @@ function footer() {
 
 
 let sumTotalOftotal = 0;
+
+    let sumTotalOftotal = 0;
     for (let i = 0; i < hour.length; i++) {
         let totalEachHour = 0;
         for (let j = 0; j < shopsName.length; j++) {
@@ -174,6 +161,29 @@ function addstore(event) {
     store1.calculateCookiesHour();
     footer1.remove();
     store1.bodytable();
+    footer();
+}
+
+    let totalOFtotal = document.createElement('th');
+    footer1.appendChild(totalOFtotal);
+    totalOFtotal.textContent = sumTotalOftotal;
+}
+
+let form = document.getElementById('form1');
+form.addEventListener('submit', addstore);
+function addstore(event) {
+    event.preventDefault();
+    // footer1.remove();
+    let location1 = event.target.Location.value;
+    let Cookies1 = event.target.Cookie.value;
+    let Minimum1 = event.target.Minimum.value;
+    let Maximum1 = event.target.Maximum.value;
+    let store1 = new SalmonCookies(location1, Minimum1, Maximum1, Cookies1);
+    store1.calculateRandomCus();
+    store1.calculateCookiesHour();
+    store1.bodytable();
+    let lastRow = getElementById('totalRow');
+    lastRow.remove();
     footer();
 }
 

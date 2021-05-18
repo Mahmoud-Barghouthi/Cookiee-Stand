@@ -124,6 +124,10 @@ function footer() {
     footer1.appendChild(footer2);
     footer2.textContent = 'Totals';
 
+ 
+
+
+let sumTotalOftotal = 0;
 
     let sumTotalOftotal = 0;
     for (let i = 0; i < hour.length; i++) {
@@ -137,6 +141,28 @@ function footer() {
         sumTotalOftotal = sumTotalOftotal + totalEachHour;
 
     }
+
+
+    let totalOFtotal = document.createElement('th');
+    footer1.appendChild(totalOFtotal);
+    totalOFtotal.textContent = sumTotalOftotal;
+}
+
+let form = document.getElementById('form1');
+form.addEventListener('submit', addstore);
+function addstore(event) {
+    event.preventDefault();
+    let location1 = event.target.Location.value;
+    let Cookies1 = event.target.Cookie.value;
+    let Minimum1 = event.target.Minimum.value;
+    let Maximum1 = event.target.Maximum.value;
+    let store1 = new SalmonCookies(location1, Minimum1, Maximum1, Cookies1);
+    store1.calculateRandomCus();
+    store1.calculateCookiesHour();
+    footer1.remove();
+    store1.bodytable();
+    footer();
+}
 
     let totalOFtotal = document.createElement('th');
     footer1.appendChild(totalOFtotal);
